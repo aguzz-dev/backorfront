@@ -33,7 +33,7 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 5em;
             margin-bottom: 2rem;
             color: var(--primary-color);
         }
@@ -64,8 +64,9 @@
 
         .feedback-icon {
             position: absolute;
+            scale: 1.6;
             top: -30px;
-            left: 50%;
+            left: 55%;
             transform: translateX(-50%);
             font-size: 4rem;
             opacity: 0;
@@ -122,7 +123,7 @@
     <div class="container">
         <div class="start-screen">
             <h1>Back o Front</h1>
-            <p>¿Puedes identificar si el desarrollador es Backend o Frontend?</p>
+            <p style="font-size: 1.5rem;">¿Puedes identificar si el desarrollador es Backend o Frontend?</p>
             <button class="button" onclick="startGame()">¡Jugar!</button>
         </div>
 
@@ -143,20 +144,20 @@
 
     <script>
         const developers = [
-            { image: "{{ asset('img/back-1.jpg') }}", type: 'backend' },
-            { image: "{{ asset('img/back-2.jpg') }}", type: 'backend' },
-            { image: "{{ asset('img/back-3.jpg') }}", type: 'backend' },
-            { image: "{{ asset('img/back-4.jpg') }}", type: 'backend' },
-            { image: "{{ asset('img/back-5.jpg') }}", type: 'backend' },
-            { image: "{{ asset('img/back-6.jpg') }}", type: 'backend' },
-            { image: "{{ asset('img/back-7.jpg') }}", type: 'backend' },
-            { image: "{{ asset('img/front-1.jpg') }}", type: 'frontend' },
-            { image: "{{ asset('img/front-2.jpg') }}", type: 'frontend' },
-            { image: "{{ asset('img/front-3.jpg') }}", type: 'frontend' },
-            { image: "{{ asset('img/front-4.jpg') }}", type: 'frontend' },
-            { image: "{{ asset('img/front-5.jpg') }}", type: 'frontend' },
-            { image: "{{ asset('img/front-6.jpg') }}", type: 'frontend' },
-            { image: "{{ asset('img/front-7.jpg') }}", type: 'frontend' }
+            { image: "{{ asset('img/1.webp') }}", type: 'backend' },
+            { image: "{{ asset('img/2.webp') }}", type: 'backend' },
+            { image: "{{ asset('img/3.webp') }}", type: 'backend' },
+            { image: "{{ asset('img/4.webp') }}", type: 'backend' },
+            { image: "{{ asset('img/5.webp') }}", type: 'backend' },
+            { image: "{{ asset('img/6.webp') }}", type: 'backend' },
+            { image: "{{ asset('img/7.webp') }}", type: 'backend' },
+            { image: "{{ asset('img/11.webp') }}", type: 'frontend' },
+            { image: "{{ asset('img/12.webp') }}", type: 'frontend' },
+            { image: "{{ asset('img/13.webp') }}", type: 'frontend' },
+            { image: "{{ asset('img/14.webp') }}", type: 'frontend' },
+            { image: "{{ asset('img/15.webp') }}", type: 'frontend' },
+            { image: "{{ asset('img/16.webp') }}", type: 'frontend' },
+            { image: "{{ asset('img/17.webp') }}", type: 'frontend' }
         ];
 
         developers.sort(() => Math.random() - 0.5);
@@ -229,6 +230,7 @@
         }
 
         function resetGame() {
+            developers.sort(() => Math.random() - 0.5);
             currentQuestion = 0;
             score = 0;
             document.getElementById('score').textContent = '0';
