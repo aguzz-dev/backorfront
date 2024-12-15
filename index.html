@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back o Front - ¡El Juego!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="start-screen">
+            <h1>Back o Front</h1>
+            <p style="font-size: 1.5rem;">¿Puedes identificar si el desarrollador es Backend o Frontend?</p>
+            <button class="button" onclick="startGame()">¡Jugar!</button>
+        </div>
+
+        <div class="game-container">
+            <div class="progress">Pregunta <span id="current-question">1</span>/10</div>
+            <div class="score">Puntos: <span id="score">0</span></div>
+            <div class="image-container">
+                <div class="feedback-icon"></div>
+                <img class="dev-image" id="dev-image" src="" alt="Desarrollador">
+            </div>
+            <div id="voto" class="buttons">
+                <button class="button" onclick="checkAnswer('backend')">Backend</button>
+                <button class="button" onclick="checkAnswer('frontend')">Frontend</button>
+            </div>
+            <div class="final-score" id="final-score"></div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

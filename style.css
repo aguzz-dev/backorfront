@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #646cff;
+    --secondary-color: #535bf2;
+    --background-color: #242424;
+    --text-color: #ffffff;
+    --success-color: #4caf50;
+    --error-color: #f44336;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.game-container {
+    display: none;
+}
+
+.start-screen {
+    display: block;
+}
+
+.image-container {
+    margin: 2rem 0;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.dev-image {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-icon {
+    position: absolute;
+    scale: 1.6;
+    top: -30px;
+    left: 55%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feedback-icon.correct {
+    color: var(--success-color);
+}
+
+.feedback-icon.incorrect {
+    color: var(--error-color);
+}
+
+.feedback-icon.visible {
+    opacity: 1;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+.score {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.progress {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.final-score {
+    display: none;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
